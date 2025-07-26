@@ -1,5 +1,6 @@
 import { useState } from "react";
-import axios from "axios";
+
+import axiosInstance from "../utils/axiosInstance.js";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -21,7 +22,7 @@ const ContactPage = () => {
     setFeedback({ type: "", message: "" });
 
     try {
-      const res = await axios.post("http://localhost:3000/api/contact/send", formData);
+      const res = await axiosInstance.post("/api/contact/send", formData);;
       setFeedback({
         type: "success",
         message: res.data.message || "Your message has been sent successfully.",
