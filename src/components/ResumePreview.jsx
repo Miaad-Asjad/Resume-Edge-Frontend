@@ -60,7 +60,7 @@ const renderBulletList = (items) => (
         {data.summary && (
           <section className="mb-6">
             <h2 className="text-[18pt] font-bold mb-2">Objective</h2>
-            {renderBulletList([data.summary])}
+            <p className="text-justify leading-[1.8]">{data.summary}</p>
 
           </section>
         )}
