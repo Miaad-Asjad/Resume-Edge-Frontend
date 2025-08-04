@@ -45,15 +45,16 @@ const renderBulletList = (items) => (
           </div>
 
           {/* Profile Image */}
-          {data.profilePicture && (
-            <div className="w-[135px] h-[140px] border rounded overflow-hidden">
-              <img
-                src={data.profilePicture}
-                alt="Profile"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          )}
+        {data.profilePicture && (
+  <div className="w-[135px] h-[140px] border-[2px] border-gray-300 rounded-md overflow-hidden shadow-sm flex-shrink-0">
+    <img
+      src={data.profilePicture}
+      alt="Profile"
+      className="w-full h-full object-cover object-top"
+    />
+  </div>
+)}
+
         </div>
 
         {/* Objective */}
